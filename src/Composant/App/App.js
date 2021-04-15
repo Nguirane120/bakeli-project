@@ -13,7 +13,7 @@ import HomePageApp from '../Apprenant/HomePageApp/HomePageApp';
 
 import * as ROUTES from '../../Constant/routes';
 import './App.css';
-//import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const App = () => {
   return (
