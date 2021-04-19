@@ -1,10 +1,11 @@
 import React from "react"
+import Sidebar from "./Sidebar"
 
 const HomePageAdmin = () => {
     return(
-        <diV>
-            <h6>Dashboard admin</h6>
-        </diV>
+        <div>
+            <Sidebar />
+        </div>
     )
 }
 
