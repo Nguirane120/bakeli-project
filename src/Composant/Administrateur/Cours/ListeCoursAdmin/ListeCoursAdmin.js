@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
 
-import Tutorial from "./tutorial.component";
+import Tutorial from "./DetailCoursAdmin";
 
 export default class TutorialsList extends Component {
   constructor(props) {
@@ -79,7 +79,8 @@ export default class TutorialsList extends Component {
     return (
       <div className="list row">
         <div className="col-md-6">
-          <h4>Tutorials List</h4>
+          
+          <h4>Tutoriels List</h4>
 
           <ul className="list-group">
             {tutorials &&
@@ -113,7 +114,7 @@ export default class TutorialsList extends Component {
           ) : (
             <div>
               <br />
-              <p>Click on a Tutorial...</p>
+              <p>Click sur un Tutoriel...</p>
             </div>
           )}
         </div>

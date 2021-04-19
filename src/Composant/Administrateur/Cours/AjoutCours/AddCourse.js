@@ -106,13 +106,13 @@ export default class AddTutorial extends Component {
           <div>
             <h4>You submitted successfully!</h4>
             <button className="btn btn-success" onClick={this.newTutorial}>
-              Add
+              Ajouter
             </button>
           </div>
         ) : (
           <div>
             <div className="form-group">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Titre</label>
               <input
                 type="text"
                 className="form-control"
@@ -138,7 +138,7 @@ export default class AddTutorial extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="time">Time</label>
+              <label htmlFor="time">Temps</label>
               <input
                 type="text"
                 className="form-control"
@@ -151,7 +151,7 @@ export default class AddTutorial extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="teacher">Teacher</label>
+              <label htmlFor="teacher">Professeur</label>
               <input
                 type="text"
                 className="form-control"
@@ -164,7 +164,7 @@ export default class AddTutorial extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="lesson">Lesson</label>
+              <label htmlFor="lesson">Leçon</label>
               <input
                 type="text"
                 className="form-control"

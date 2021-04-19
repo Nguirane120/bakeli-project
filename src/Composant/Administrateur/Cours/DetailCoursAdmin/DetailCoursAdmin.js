@@ -177,17 +177,19 @@ export default class Tutorial extends Component {
     const { currentTutorial } = this.state;
 
     return (
-      <div className="card">
-        <div class="card-header">
-        <h4>Tutorial</h4>
+      <div className="card bg-light">
+        <div class="card-header bg-dark">
+        <h4>Tutoriel</h4>
         </div>
         {currentTutorial ? (
+          <div className="card-body">
           <div>
             
             <form>
-
+              
               <div className="form-group">
-                <label htmlFor="title">Title</label>
+                
+                <label htmlFor="title">Titre</label>
                 <input
                   type="text"
                   className="form-control"
@@ -209,7 +211,7 @@ export default class Tutorial extends Component {
               </div>
 
               <div className="form-group">
-              <label htmlFor="time">Time</label>
+              <label htmlFor="time">Temps</label>
               <input
                 type="text"
                 className="form-control"
@@ -220,7 +222,7 @@ export default class Tutorial extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="teacher">Teacher</label>
+              <label htmlFor="teacher">Professeur</label>
               <input
                 type="text"
                 className="form-control"
@@ -231,7 +233,7 @@ export default class Tutorial extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="lesson">Lesson</label>
+              <label htmlFor="lesson">Leçon</label>
               <input
                 type="text"
                 className="form-control"
@@ -251,7 +253,8 @@ export default class Tutorial extends Component {
                   onChange={this.onChangeDescription}
                 />
               </div>
-
+              
+              
               <div className="form-group">
                 <label>
                   <strong>Status:</strong>
@@ -291,6 +294,7 @@ export default class Tutorial extends Component {
               Update
             </button>
             <p>{this.state.message}</p>
+          </div>
           </div>
         ) : (
           <div>
