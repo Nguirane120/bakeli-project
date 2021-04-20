@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/App/App';
+import App from './Composants/App/App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-//import Firebase, { FirebaseContext } from './Components/Firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Firebase, { FirebaseContext } from './Composants/Firebase'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <FirebaseContext.Provider value={ new Firebase()}>
+       <App />
+  </FirebaseContext.Provider>,
+
   document.getElementById('root')
 );
 
