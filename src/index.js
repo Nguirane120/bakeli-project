@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Composants/App/App';
+import App from './Composant/App/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Firebase, { FirebaseContext } from './Composants/Firebase'
+import Firebase, { FirebaseContext } from './Composant/Firebase'
 
 ReactDOM.render(
   <FirebaseContext.Provider value={ new Firebase()}>
