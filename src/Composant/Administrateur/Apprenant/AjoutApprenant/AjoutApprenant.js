@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-//import React, { Component } from "react";//
+
 import TutorialDataService from "../services/tutorial.service";
 
-export default class AddTutorial extends Component {
+export default class AjoutApprenant extends Component {
   constructor(props) {
     super(props);
     this.onChangeNoms = this.onChangeNoms.bind(this);
@@ -10,7 +10,6 @@ export default class AddTutorial extends Component {
     this.onChangeTelephone = this.onChangeTelephone.bind(this);
     this.onChangeGmail = this.onChangeGmail.bind(this);
     this.onChangePasse = this.onChangePasse.bind(this);
-    
     this.saveTutorial = this.saveTutorial.bind(this);
     this.newTutorial = this.newTutorial.bind(this);
 
@@ -34,7 +33,7 @@ export default class AddTutorial extends Component {
 
   onChangePrenoms(e) {
     this.setState({
-      date: e.target.value,
+      prenoms: e.target.value,
     });
   }
 
@@ -60,12 +59,12 @@ export default class AddTutorial extends Component {
 
   saveTutorial() {
     let data = {
-     nomd: this.state.noms,
-      prenoms: this.state.prenoms,
-      telephone: this.state.telephone,
-      gmail: this.state.gmail,
-      passe: this.state.passe,
-      published: false
+     noms: this.state.noms,
+     prenoms: this.state.prenoms,
+     telephone: this.state.telephone,
+     gmail: this.state.gmail,
+     passe: this.state.passe,
+     published: false
     };
 
     TutorialDataService.create(data)
