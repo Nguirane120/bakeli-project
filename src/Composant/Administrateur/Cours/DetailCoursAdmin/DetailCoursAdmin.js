@@ -177,12 +177,12 @@ export default class Tutorial extends Component {
     const { currentTutorial } = this.state;
 
     return (
-      <div className="card bg-light">
+      <div className="card">
         <div class="card-header bg-dark">
         <h4>Tutoriel</h4>
         </div>
         {currentTutorial ? (
-          <div className="card-body">
+          <div className="card-body bg-warning">
           <div>
             
             <form>
