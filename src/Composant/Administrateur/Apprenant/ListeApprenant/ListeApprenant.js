@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/service";
 
 import Tutorial from "./DetailApprenant";
 
@@ -78,7 +78,7 @@ export default class ListeApprenant extends Component {
     return (
       <div className="list row">
         <div className="col-md-6">
-          <h4>Tutorial List</h4>
+          <h4>liste Apprenants</h4>
 
           <ul className="list-group">
             {tutorials &&
@@ -91,7 +91,7 @@ export default class ListeApprenant extends Component {
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                  {tutorial.title}
+                  {tutorial.noms}
                 </li>
               ))}
           </ul>
@@ -112,7 +112,7 @@ export default class ListeApprenant extends Component {
           ) : (
             <div>
               <br />
-              <p>Please click on a Tutorial...</p>
+              <p>cliquez sur detail...</p>
             </div>
           )}
         </div>

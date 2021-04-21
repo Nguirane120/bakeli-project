@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/service";
 
 export default class DetailApprenant extends Component {
   constructor(props) {
@@ -128,6 +128,27 @@ export default class DetailApprenant extends Component {
       });
   }
 
+
+  updateArchive(status) {
+    TutorialDataService.update(this.state.currentTutorial.key, {
+      archive: status,
+    })
+      .then(() => {
+        this.setState((prevState) => ({
+          currentTutorial: {
+            ...prevState.currentTutorial,
+            archive: status,
+          },
+          message: "The status was updated successfully!",
+        }));
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+
+
   updateTutorial() {
     const data = {
       noms : this.state.currentTutorial.noms,
@@ -164,7 +185,7 @@ export default class DetailApprenant extends Component {
 
     return (
       <div>
-        <h4>Tutorial</h4>
+        <h4>Detail</h4>
         {currentTutorial ? (
           <div className="edit-form">
             <form>
@@ -255,13 +276,33 @@ export default class DetailApprenant extends Component {
               </button>
             )}
 
-            <button
-              className="badge badge-danger mr-2"
-              onClick={this.deleteTutorial}
-            >
-              Delete
-            </button>
 
+               <form>
+                 <div>
+            
+                {currentTutorial.archive ? "Archive" : "Pending" }
+              </div>
+            </form>
+
+            {currentTutorial.archive ? (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updateArchive(false)}
+              >
+                UnArchive
+              </button>
+            ) : (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updateArchive(true)}
+              >
+                Archive
+              </button>
+            )}
+
+            
+
+            
             <button
               type="submit"
               className="badge badge-success"
