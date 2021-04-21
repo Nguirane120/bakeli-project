@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataServiceA from "../services/tutorial2.service";
 
-import Tutorial from "./DetailCours";
+import Tutorial from "./DetailArchive";
 
-export default class ListeCoursAdmin extends Component {
+export default class Archive extends Component {
   constructor(props) {
     super(props);
     this.refreshList = this.refreshList.bind(this);
@@ -19,11 +19,11 @@ export default class ListeCoursAdmin extends Component {
   }
 
   componentDidMount() {
-    TutorialDataService.getAll().on("value", this.onDataChange);
+    TutorialDataServiceA.getAll().on("value", this.onDataChange);
   }
 
   componentWillUnmount() {
-    TutorialDataService.getAll().off("value", this.onDataChange);
+    TutorialDataServiceA.getAll().off("value", this.onDataChange);
   }
 
   onDataChange(items) {
@@ -64,7 +64,7 @@ export default class ListeCoursAdmin extends Component {
   }
 
   removeAllTutorials() {
-    TutorialDataService.deleteAll()
+    TutorialDataServiceA.deleteAll()
       .then(() => {
         this.refreshList();
       })
@@ -81,7 +81,7 @@ export default class ListeCoursAdmin extends Component {
         <div className="col-md-6">
 
           <div className="card-header bg-dark">
-          <h4>Tutoriels List</h4>
+          <h4>Archives</h4>
           </div>
 
           <ul className="list-group">
@@ -99,6 +99,12 @@ export default class ListeCoursAdmin extends Component {
                 </li>
               ))}
           </ul>
+          <button
+            className="m-3 btn btn-sm btn-danger"
+            onClick={this.removeAllTutorials}
+          >
+            Remove All
+          </button>
 
         </div>
         <div className="col-md-6">

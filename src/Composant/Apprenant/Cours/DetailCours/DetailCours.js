@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
 
-export default class Tutorial extends Component {
+export default class DetailCours extends Component {
   constructor(props) {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
@@ -177,7 +177,7 @@ export default class Tutorial extends Component {
     const { currentTutorial } = this.state;
 
     return (
-      <div className="card bg-light">
+      <div className="card">
         <div class="card-header bg-dark">
         <h4>Tutoriel</h4>
         </div>
@@ -185,7 +185,7 @@ export default class Tutorial extends Component {
           <div>
             
             <form>
-            <div className="card-body">
+            <div className="card-body bg-primary">
               <div className="form-group">
                 <label htmlFor="title">Titre</label>
                 <input

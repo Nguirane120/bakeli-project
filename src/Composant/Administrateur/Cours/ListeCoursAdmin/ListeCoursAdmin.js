@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../../../../services/tutorial.service";
 
 import Tutorial from "./DetailCoursAdmin";
 
-export default class TutorialsList extends Component {
+export default class ListeCoursAdmin extends Component {
   constructor(props) {
     super(props);
     this.refreshList = this.refreshList.bind(this);

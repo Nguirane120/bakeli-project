@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
-import TutorialDataServiceA from "../services/tutorial2.service";
 
-export default class DetailCours extends Component {
+export default class Archive extends Component {
   constructor(props) {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
@@ -125,23 +124,18 @@ export default class DetailCours extends Component {
     }));
   }
 
-  updatePublished() {
-    let data = {
-      title: this.state.title,
-      date: this.state.date,
-      time: this.state.time,
-      teacher: this.state.teacher,
-      lesson: this.state.lesson,
-      description: this.state.description,
-      published: false
-    };
-
-    TutorialDataServiceA.create(data)
+  updatePublished(status) {
+    TutorialDataService.update(this.state.currentTutorial.key, {
+      published: status,
+    })
       .then(() => {
-        console.log("Created new item successfully!");
-        this.setState({
-          submitted: true,
-        });
+        this.setState((prevState) => ({
+          currentTutorial: {
+            ...prevState.currentTutorial,
+            published: status,
+          },
+          message: "The status was updated successfully!",
+        }));
       })
       .catch((e) => {
         console.log(e);
@@ -188,13 +182,11 @@ export default class DetailCours extends Component {
         <h4>Tutoriel</h4>
         </div>
         {currentTutorial ? (
-          <div className="card-body bg-warning">
           <div>
             
             <form>
-              
+            <div className="card-body bg-success">
               <div className="form-group">
-                
                 <label htmlFor="title">Titre</label>
                 <input
                   type="text"
@@ -259,33 +251,9 @@ export default class DetailCours extends Component {
                   onChange={this.onChangeDescription}
                 />
               </div>
-              
+              </div>
             </form>
-
-              <button
-                className="btn btn-sm btn-primary mr-2"
-                onClick={() => this.updatePublished(true)}
-              >
-                Archive
-              </button>
-            
-
-            <button
-              className="btn btn-sm btn-danger mr-2"
-              onClick={this.deleteTutorial}
-            >
-              Delete
-            </button>
-
-            <button
-              type="submit"
-              className="btn btn-sm btn-success"
-              onClick={this.updateTutorial}
-            >
-              Update
-            </button>
-            <p>{this.state.message}</p>
-          </div>
+              
           </div>
         ) : (
           <div>
