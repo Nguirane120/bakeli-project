@@ -5,6 +5,7 @@ import LandingPage from '../Landing/Landing';
 import SignUpPage from '../Administrateur/InscriptionAdmin/SignupPage';
 import SignInPageApp from '../Apprenant/Connexion/SignInPageApp';
 import SignInPageAdm from '../Administrateur/ConnexionAdmin/SigninPageAdm';
+import ListeCoursAdmin from '../Administrateur/Cours/ListeCoursAdmin/ListeCoursAdmin';
 //import PasswordForgetPage from '../PasswordForget';
 import HomePageAdmin from '../Administrateur/HomePageAdmin/HomePageAdmin';
 import HomePageApp from '../Apprenant/HomePageApp/HomePageApp';
@@ -28,6 +29,7 @@ const App = () => {
                 <Route path={ROUTES.SIGN_IN_ADM} component={SignInPageAdm} />
                 <Route path={ROUTES.HOME} component={HomePageApp} />
                 <Route path={ROUTES.HOME_ADM} component={HomePageAdmin} />
+                <Route path={ROUTES.COURS} component={ListeCoursAdmin} />
             </div>
         </Router>
   );
