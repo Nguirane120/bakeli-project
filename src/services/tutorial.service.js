@@ -1,26 +1,26 @@
-import firebase from "../firebase";
+import firebase from "../Composant/Firebase/firebase";
 
-const db = firebase.ref("/Cours");
+//const db = firebase.ref("/Cours");
 
 class TutorialDataService {
   getAll() {
-    return db;
+    //return db;
   }
 
   create(tutorial) {
-    return db.push(tutorial);
+    //return db.push(tutorial);
   }
 
   update(key, value) {
-    return db.child(key).update(value);
+    //return db.child(key).update(value);
   }
 
   delete(key) {
-    return db.child(key).remove();
+    //return db.child(key).remove();
   }
 
   deleteAll() {
-    return db.remove();
+    //return db.remove();
   }
 }
 

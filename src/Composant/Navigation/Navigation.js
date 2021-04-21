@@ -33,8 +33,21 @@ const Navigation = () => {
                                     <Link className="nav-link" to={ROUTES.HOME_ADM}>DashboardAdmin</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to={ROUTES.COURS}>ListeCours</Link>
+                                    <Link className="nav-link" to={ROUTES.COURS_ADM}>ListeCoursAdm</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to={ROUTES.COURS_APP}>ListeCoursApp</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to={ROUTES.ADD_COURSE}>AjoutCours</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to={ROUTES.ARCHI_COURSE}>ArchCours</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to={ROUTES.DETAIL_ARCHI_COURSE}>DetailArchi</Link>
+                                </li>
+                                
                             </ul>
                         </div>
                     </nav>

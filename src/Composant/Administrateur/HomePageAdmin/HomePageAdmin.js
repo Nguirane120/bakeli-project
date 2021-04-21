@@ -2,9 +2,9 @@ import React from "react"
 
 const HomePageAdmin = () => {
     return(
-        <diV>
+        <div>
             <h6>Dashboard admin</h6>
-        </diV>
+        </div>
     )
 }
 

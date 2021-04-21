@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataServiceA from "../services/tutorial2.service";
+import TutorialDataServiceA from "../../../../services/tutorial2.service";
 
 import Tutorial from "./DetailArchive";
 

@@ -1,4 +1,4 @@
-import firebase from "firebase";
+{/*import firebase from "firebase";
 import "firebase/database";
 
 var firebaseConfig = {
@@ -13,4 +13,4 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-export default firebase.database();
+export default firebase.database();*/}
