@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/tutorial.service";
-import TutorialDataServiceA from "../services/tutorial2.service";
+import TutorialDataService from "../../../../services/tutorial.service";
+import TutorialDataServiceA from "../../../../services/tutorial2.service";
 
 export default class DetailCours extends Component {
   constructor(props) {

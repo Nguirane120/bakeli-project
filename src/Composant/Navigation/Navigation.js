@@ -32,6 +32,9 @@ const Navigation = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" to={ROUTES.HOME_ADM}>DashboardAdmin</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to={ROUTES.COURS}>ListeCours</Link>
+                                </li>
                             </ul>
                         </div>
                     </nav>
