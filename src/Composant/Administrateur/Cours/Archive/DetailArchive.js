@@ -164,7 +164,7 @@ export default class Archive extends Component {
   }
 
   deleteTutorial() {
-    TutorialDataService.delete(this.state.currentTutorial.key)
+    TutorialDataServiceA.delete(this.state.currentTutorial.key)
       .then(() => {
         this.props.refreshList();
       })
@@ -251,8 +251,16 @@ export default class Archive extends Component {
                   onChange={this.onChangeDescription}
                 />
               </div>
+              <button
+              className="btn btn-sm btn-danger mr-2"
+              onClick={this.deleteTutorial}
+            >
+              Delete
+            </button>
               </div>
             </form>
+
+            
               
           </div>
         ) : (

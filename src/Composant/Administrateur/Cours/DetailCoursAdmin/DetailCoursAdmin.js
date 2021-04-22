@@ -142,6 +142,10 @@ export default class DetailCours extends Component {
         this.setState({
           submitted: true,
         });
+      TutorialDataService.delete(this.state.currentTutorial.key)
+        .then(() => {
+        this.props.refreshList();
+      })
       })
       .catch((e) => {
         console.log(e);
