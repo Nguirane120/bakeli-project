@@ -38,7 +38,7 @@ const SignUpPage = (props) => {
       firebase.signUpser(email, password)
       .then(user =>{
         setLoginData({...data})
-        props.history.push(ROUTES.HOME_ADM)
+        props.history.push(ROUTES.SIGN_IN_ADM)
       })
       .catch( error =>{
         setError(error)
