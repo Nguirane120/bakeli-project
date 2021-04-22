@@ -1,4 +1,6 @@
 import React from "react"
+//import Sidebar from "../../"
+import Aside from "./Aside/Aside"
 
 
 const HomePageApp = () => {
@@ -17,7 +19,7 @@ const HomePageApp = () => {
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <p>Calendrier</p>
+                        <Aside />
                     </div>
                 </div>
             </div>
