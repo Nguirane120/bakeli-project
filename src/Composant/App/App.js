@@ -13,7 +13,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import Navigation2 from '../Navigation/Navigation2';
-import LandingPage from '../Landing/Landing';
+import LandingPage from '../Landing/index';
 import SignUpPage from '../Administrateur/InscriptionAdmin/SignupPage';
 import SignInPageApp from '../Apprenant/Connexion/SignInPageApp';
 import SignInPageAdm from '../Administrateur/ConnexionAdmin/SigninPageAdm';
