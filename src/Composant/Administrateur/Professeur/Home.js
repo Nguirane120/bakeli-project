@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Heading } from './Heading';
-import { Listprofesseur } from './Listprofesseur';
+import { Listprofesseur } from './ListeProfesseur/ListeProfesseur';
 
 export const Home = () => {
     return (
@@ -10,8 +10,8 @@ export const Home = () => {
                     <h3 className="text-left  text-3xl mt-20 
                     text-base leading-8 text-black font-bold tracking-wide
                      uppercase">Liste des professeurs</h3>
-                    <Heading />
                     <Listprofesseur />
+                    <Heading />
                 </div>
             </div>
         </Fragment>
