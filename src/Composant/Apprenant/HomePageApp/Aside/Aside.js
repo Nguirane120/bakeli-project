@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendars from './Calendar';
+import Calendars from './Calendars';
 import AboutTeacher from './AboutTeacher';
 import Statistique from './Statistique';
 
