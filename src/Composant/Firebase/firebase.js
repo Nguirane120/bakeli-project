@@ -1,5 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/database'
 
 const config = {
     apiKey: "AIzaSyA1mOh2IWpqQjKCGgWTK-ojttglwyrjR7U",
@@ -17,7 +18,7 @@ class Firebase{
         app.initializeApp(config);
         this.auth = app.auth();
 
-        // this.db = app.database();
+        this.db = app.database();
     }
 
     signUpser = (email, password) =>
@@ -35,9 +36,8 @@ class Firebase{
 
 
     
-    //   user = uid => this.db.ref(`users/${uid}`);
+      user = uid => this.db.ref(`users/${uid}`);
 
-    //   users = () => this.db.ref("users");
 
 }
 

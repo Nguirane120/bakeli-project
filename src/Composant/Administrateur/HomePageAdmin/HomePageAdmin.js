@@ -1,10 +1,15 @@
 import React from "react"
-import Sidebar from "./Sidebar"
+import ListApprenant from "../Apprenant/ListApprenant"
+import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
 const HomePageAdmin = () => {
     return(
         <div>
-            <Sidebar />
+            <h6>Dashboard admin</h6>
+            <ApprenantProvider>
+            <ListApprenant/>
+            </ApprenantProvider>
+            
         </div>
     )
 }

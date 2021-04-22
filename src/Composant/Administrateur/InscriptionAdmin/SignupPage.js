@@ -1,104 +1,108 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-
-//import { withFirebase } from '../../Firebase';
+import React, { useState, useContext} from "react"
+import { Form, Button, Card, Container } from "react-bootstrap"
+import { Link } from "react-router-dom";
+import { FirebaseContext } from "../../Firebase";
 import * as ROUTES from '../../../Constant/routes';
 
-const SignUpPage = () => (
-  <div>
-    <h1>SignUp</h1>
-    {/*<SignUpForm />*/}
-  </div>
-);
 
-const INITIAL_STATE = {
-  username: '',
-  email: '',
-  passwordOne: '',
-  passwordTwo: '',
-  error: null,
-};
 
-class SignUpFormBase extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = { ...INITIAL_STATE };
-  }
 
-  onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
 
-    this.props.firebase
-      .doCreateUserWithEmailAndPassword(email, passwordOne)
-      .then(authUser => {
-        this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+const SignUpPage = (props) => {
+
+
+    const firebase  = useContext(FirebaseContext)
+
+
+    const data = {
+        nom:"",
+        prenom:"",
+        email:"",
+        password:"",
+        confirmPassword:""
+      }
+    
+     const [ loginData, setLoginData] = useState(data)
+    const [ error, setError ] = useState("")
+    
+    
+    const handleChange = (e)=>{
+      setLoginData({...loginData, [e.target.name]: e.target.value})
+    }
+    
+    
+    const handleSubmit = e =>{
+      e.preventDefault();
+      const {email, password} = loginData;
+      firebase.signUpser(email, password)
+      .then(user =>{
+        setLoginData({...data})
+        props.history.push(ROUTES.SIGN_IN_ADM)
       })
-      .catch(error => {
-        this.setState({ error });
-      });
+      .catch( error =>{
+        setError(error)
+      })
+    }
+    
+    
+    const {nom, prenom, email, password, confirmPassword } = loginData;
+    
+    const btn = nom == "" || prenom == "" || email === "" || password === "" || password !== confirmPassword
+    ?  <Button className="w-100" type="submit" disabled >Inscription</Button>:<Button className="w-100" type="submit">Inscription</Button>
+    
+    //gestion erreur
+    
+    const errorMsg = error !== "" && <span className="alert alert-danger">{error.message}</span>
 
-    event.preventDefault();
-  };
 
-  onChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
 
-  render() {
-    const {
-      username,
-      email,
-      passwordOne,
-      passwordTwo,
-      error,
-    } = this.state;
+    return(
+        <>
+    <Container className="d-flex align-items-center justify-content-center mt-5" style={{ minWidth:"100vh"}}>
+      <div className="w-100" style={{ maxWidth:"400px"}}>
+      <Card>
+        <Card.Body>
+          { errorMsg }
+          <h2 className="text-center mb-4">Inscription</h2>
+          <Form onSubmit={ handleSubmit }>
+            <Form.Group>
+              <Form.Label>Nom</Form.Label>
+              <Form.Control type="text" name="nom" value={ nom } onChange={ handleChange } required />
+            </Form.Group>
 
-    const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      email === '' ||
-      username === '';
+            <Form.Group>
+              <Form.Label>Prenom</Form.Label>
+              <Form.Control type="text" name="prenom" value={ prenom } onChange={ handleChange } required />
+            </Form.Group>
 
-    return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+            <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" name="email" value={ email } onChange={ handleChange }  required />
+            </Form.Group>
 
-        {error && <p>{error.message}</p>}
-      </form>
-    );
-  }
+            <Form.Group>
+              <Form.Label>Mot de passe</Form.Label>
+              <Form.Control type="password" name="password" value={ password } onChange={ handleChange }  required />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Confirmer votre mot de passe</Form.Label>
+              <Form.Control type="password" name="confirmPassword" value={ confirmPassword } onChange={ handleChange }  required />
+            </Form.Group>
+              { btn }
+           
+          </Form>
+        </Card.Body>
+      </Card>
+      <div className="w-100 text-center mt-2">
+        Already have an account? <Link to="/login">login</Link>
+      </div>
+      </div>
+      </Container>
+    </>
+        
+    )
 }
 
 const SignUpLink = () => (
