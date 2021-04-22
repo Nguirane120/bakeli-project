@@ -81,7 +81,7 @@ export default class ListeCoursAdmin extends Component {
         <div className="col-md-6">
 
           <div className="card-header bg-dark">
-          <h4>Tutoriels List</h4>
+          <h4 class="text-light">Tutoriels List</h4>
           </div>
 
           <ul className="list-group">
