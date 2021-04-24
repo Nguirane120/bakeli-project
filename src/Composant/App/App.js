@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import LandingPage from '../Landing/Landing';
 import SignUpPage from '../Administrateur/InscriptionAdmin/SignupPage';
@@ -15,12 +15,7 @@ import * as ROUTES from '../../Constant/routes';
 import './App.css';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
-// import de khalifa
-import { GlobalProvider } from '../Administrateur/Professeur/context/GlobalState';
 
-import { Home } from '../Administrateur/Professeur/Home';
-import { AddEmployee } from '../Administrateur/Professeur/AjoutProfesseur/AjoutProfesseur';
-import { EditEmployee } from '../Administrateur/Professeur/DetailProfesseur/DetailProfesseur';
 
 
 const App = () => {
@@ -39,15 +34,6 @@ const App = () => {
             </div>
           
 
-            <GlobalProvider>
-              <div className="App">
-               <Switch>
-               <Route path={["/", "/ajout_prof"]} component={Home} exact />
-               <Route path="/list_prof" component={AddEmployee} exact />
-               <Route path="/edit/:id" component={EditEmployee} exact />
-               </Switch>
-            </div>
-           </GlobalProvider>
         </Router>
   );
 }
