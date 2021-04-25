@@ -47,7 +47,7 @@ const HomePageApp = () => {
                                 <Link className="nav-link" to={ROUTES.HOME}><span class="fa fa-home"></span>Home</Link>
                             </li>
                             <li>
-                                <Link className="nav-link" to={ROUTES.CALENDAR}><span class="fa fa-sticky-note"></span> Calendrier</Link>
+                                <a className="nav-link" href="/home/:calendar"><span class="fa fa-calendar" aria-hidden="true"></span> Calendrier</a>
                             </li>
                             <li>
                                 <a href="#"><span class="fa fa-cogs"></span> Compte</a>
@@ -65,6 +65,7 @@ const HomePageApp = () => {
                             </div>
                         </nav>
                         {/*------Page Content------*/}  
+                        <BrowserRouter>
                         <div id="content" class="p-4 p-md-5">
 
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -92,17 +93,14 @@ const HomePageApp = () => {
                         </nav>
                             
                         <h2 class="mb-4">Dashboard apprenant</h2>
-                        <BrowserRouter>
+                        
                             <switch>
-                                <Route path="/home:liste_cours_app">
-                                    <ListeCours />
-                                </Route>
-                                <Route exact path="/home/:calendar">
-                                    <Calendars />
-                                </Route>
+                                <Route path="/home:liste_cours_app" component={ListeCours}/>
+                                <Route exact path="/home/:calendar" component={Calendars}/>
                             </switch>
-                        </BrowserRouter>
+                        
                         </div>
+                        </BrowserRouter>
                     </div>
                     </div>
                     <div className="col-md-3">
