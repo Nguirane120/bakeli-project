@@ -15,6 +15,7 @@ export const DETAIL_PROF = '/edit/:id';
 export const ADD_APP = '/ajout_app';
 export const LISTE_APP = '/liste_app';
 export const DETAIL_APP = '/detail_app';
+export const CALENDAR = '/home/:calendar';
 
 
 

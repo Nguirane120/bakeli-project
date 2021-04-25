@@ -1,12 +1,12 @@
 import React from 'react';
-import Calendars from './Calendars';
+//import Calendars from './Calendars';
 import AboutTeacher from './AboutTeacher';
 import Statistique from './Statistique';
 
 const Aside = () => {
     return(
         <div>
-            <Calendars />
+            {/*<Calendars />*/}
             <hr />
             <AboutTeacher />
             <hr />

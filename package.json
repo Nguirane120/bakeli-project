@@ -9,6 +9,7 @@
     "bootstrap": "^4.6.0",
     "cdbreact": "^1.1.0",
     "firebase": "^8.4.1",
+    "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-calendar": "^3.4.0",

@@ -16,7 +16,7 @@ function LandingPage(props) {
           <div className="card text-white bg-info mb-3" style={{ maxWidth: "18rem"}}>
             <div className="card-header text-center">Administrateur</div>
             <div className="card-body">
-              <Link to="/signup" className="btn btn-white text-white">se connecter en tant que admin</Link>
+              <Link to="/signin_adm" className="btn btn-white text-white">se connecter en tant que admin</Link>
             </div>
           </div>
         </div>

@@ -1,15 +1,5 @@
 import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import Navigation2 from '../Navigation/Navigation2';
@@ -28,6 +18,7 @@ import DetailProfesseur from '../Administrateur/Professeur/DetailProfesseur/Deta
 import AjoutApprenant from '../Administrateur/Apprenant/AjoutApprenant/AjoutApprenant';
 import ListeApprenant from '../Administrateur/Apprenant/ListeApprenant/ListeApprenant';
 import DetailApprenant from '../Administrateur/Apprenant/DetailApprenant/DetailApprenant';
+import Calendars from '../Apprenant/HomePageApp/Aside/Calendars';
 //import PasswordForgetPage from '../PasswordForget';
 import HomePageAdmin from '../Administrateur/HomePageAdmin/HomePageAdmin';
 import HomePageApp from '../Apprenant/HomePageApp/HomePageApp';
@@ -53,7 +44,7 @@ const App = () => {
                 <Route path={ROUTES.HOME} component={HomePageApp} />
                 <Route path={ROUTES.HOME_ADM} component={HomePageAdmin} />
                 <Route path={ROUTES.COURS_ADM} component={ListeCoursAdmin} />
-                <Route path={ROUTES.COURS_APP} component={ListeCours} />
+                {/*<Route path={ROUTES.COURS_APP} component={ListeCours} />*/}
                 <Route path={ROUTES.ADD_COURSE} component={AddCourse} />
                 <Route path={ROUTES.ARCHI_COURSE} component={Archive} />
                 <Route path={ROUTES.DETAIL_ARCHI_COURSE} component={DetailArchive} />
@@ -63,6 +54,7 @@ const App = () => {
                 <Route path={ROUTES.ADD_APP} component={AjoutApprenant} />
                 <Route path={ROUTES.LISTE_APP} component={ListeApprenant} />
                 <Route path={ROUTES.DETAIL_APP} component={DetailApprenant} />
+                {/*<Route path={ROUTES.CALENDAR} component={Calendars} />*/}
             </div>
         </Router>
   );
