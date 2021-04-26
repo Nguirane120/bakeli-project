@@ -7,7 +7,7 @@ const CalendarCard = () => {
         <div>
 
                   
-            <h6>About teacher</h6>
+            <h6>Calendar</h6>
             <div className="card d-flex flex-row align-items-center card-teacher mb-3 mx-auto calendarCard">
                 <div className="col-4">
                     <img className="card-img-top" src={calendrier} alt="image calendrier" />

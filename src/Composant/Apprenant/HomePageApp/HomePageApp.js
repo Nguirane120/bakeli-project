@@ -103,7 +103,7 @@ const HomePageApp = () => {
                         </BrowserRouter>
                     </div>
                     </div>
-                    <div className="col-lg-3 mt-5 pl-4">
+                    <div className="col-lg-3 pt-5 px-4 aside">
                         <Aside />
                     </div>
                 </div>

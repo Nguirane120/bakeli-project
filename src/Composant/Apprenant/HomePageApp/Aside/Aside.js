@@ -10,9 +10,9 @@ const Aside = () => {
             {/*<Calendars />*/}
             {/*<hr />*/}
             <AboutTeacher />
-            <hr />
+            <hr className="bg-white"/>
             <Statistique />
-            <hr />
+            <hr className="bg-white"/>
             <CalendarCard />
         </div>
     )

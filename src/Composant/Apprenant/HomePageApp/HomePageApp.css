@@ -2,3 +2,6 @@
     width: 100vw;
     background-color: rgb(212, 211, 211);
 }
+.aside{
+    background-color: rgba(65, 105, 251, 0.5);
+}

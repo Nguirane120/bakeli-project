@@ -4,6 +4,7 @@ import './statistique.css';
 const Statistique = () => {
     return(
         <div>
+            <h6>Statistiques</h6>
             <div className="row mb-lg-2">
                 <div className="col-12 mb-2 col-md-6">
                     <div className="card card-stat">
