@@ -8,7 +8,7 @@ const Aside = () => {
     return(
         <div>
             {/*<Calendars />*/}
-            <hr />
+            {/*<hr />*/}
             <AboutTeacher />
             <hr />
             <Statistique />

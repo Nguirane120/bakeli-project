@@ -36,7 +36,7 @@ const HomePageApp = () => {
         <>
             {/*<div className="container-fluid">*/}
                 <div className="row">
-                    <div className="col-md-9">
+                    <div className="col-lg-9">
                     <div class="wrapper d-flex align-items-stretch">
                         
                     <nav id="sidebar" class="active">
@@ -103,7 +103,7 @@ const HomePageApp = () => {
                         </BrowserRouter>
                     </div>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-lg-3 mt-5 pl-4">
                         <Aside />
                     </div>
                 </div>
