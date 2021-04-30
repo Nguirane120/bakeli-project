@@ -7,6 +7,7 @@ import './HomePageApp.css';
 import * as ROUTES from '../../../Constant/routes';
 import Calendars from "./Aside/Calendars";
 import ListeCours from "../Cours/ListeCours/ListeCours"
+import SignOutButton from "../../Deconnexion/Deconnexion"
 //import ListeCours from '../Cours/ListeCours/ListeCours'
 
 
@@ -47,7 +48,7 @@ const HomePageApp = () => {
                                 <Link className="nav-link" to={ROUTES.HOME}><span class="fa fa-home"></span>Home</Link>
                             </li>
                             <li>
-                                <a className="nav-link" href="/home/:calendar"><span class="fa fa-calendar" aria-hidden="true"></span> Calendrier</a>
+                                <Link className="nav-link" to={ROUTES.CALENDAR}><span class="fa fa-calendar" aria-hidden="true"></span> Calendrier</Link>
                             </li>
                             <li>
                                 <a href="#"><span class="fa fa-cogs"></span> Compte</a>
@@ -65,7 +66,7 @@ const HomePageApp = () => {
                             </div>
                         </nav>
                         {/*------Page Content------*/}  
-                        <BrowserRouter>
+                        <Router>
                         <div id="content" class="p-4 p-md-5">
 
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -85,7 +86,7 @@ const HomePageApp = () => {
                                     <Link className="nav-link" to={"/home:liste_cours_app"}>ListeCoursApp</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to={ROUTES}>Déconnexion</Link>
+                                    <SignOutButton />
                                 </li>
                             </ul>
                             </div>
@@ -94,13 +95,14 @@ const HomePageApp = () => {
                             
                         <h2 class="mb-4">Dashboard apprenant</h2>
                         
-                            <switch>
+                            <Switch>
                                 <Route path="/home:liste_cours_app" component={ListeCours}/>
                                 <Route exact path="/home/:calendar" component={Calendars}/>
-                            </switch>
+                                <p>dfghjk</p>
+                            </Switch>
                         
                         </div>
-                        </BrowserRouter>
+                        </Router>
                     </div>
                     </div>
                     <div className="col-lg-3 pt-5 px-4 aside">

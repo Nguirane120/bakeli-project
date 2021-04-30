@@ -1,4 +1,4 @@
-import firebase from "../firebase";
+/*import firebase from "../firebase";
 
 //const db = firebase.ref("/DetailApprenant");
 
@@ -24,4 +24,4 @@ class TutorialDataService {
   }
 }
 
-export default new TutorialDataService();
+export default new TutorialDataService();*/

@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
-import Navigation2 from '../Navigation/Navigation2';
+//import Navigation from '../Navigation/Navigation';
+//import Navigation2 from '../Navigation/Navigation2';
+import Navigation3 from '../Navigation/Navigation2';
 import LandingPage from '../Landing/index';
 import SignUpPage from '../Administrateur/InscriptionAdmin/SignupPage';
 import SignInPageApp from '../Apprenant/Connexion/SignInPageApp';
@@ -33,8 +34,9 @@ const App = () => {
   return (
     <Router>
             <div>
-                <Navigation />
-                <Navigation2 />
+                {/*<Navigation />
+                <Navigation2 />*/}
+                <Navigation3 />
 
                 <hr/>
                 <Route exact path={ROUTES.LANDING} component={LandingPage} />

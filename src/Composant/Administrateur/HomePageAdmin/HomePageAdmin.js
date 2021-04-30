@@ -10,6 +10,8 @@ import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeA
 //import ListApprenant from "../Apprenant/ListApprenant"
 //import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
+import SignOutButton from "../../Deconnexion/Deconnexion"
+
 const HomePageAdmin = () => {
 
 
@@ -103,6 +105,9 @@ const HomePageAdmin = () => {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to={ROUTES.LISTE_APP}>ListeApprenant</Link>
+                    </li>
+                    <li className="nav-item">
+                        <SignOutButton />
                     </li>
                 </ul>
                 </div>
