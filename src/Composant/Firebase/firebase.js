@@ -96,6 +96,9 @@ class Firebase{
       Cours2 = uid => this.db.ref(`Cours2/${uid}`);
       Cours2 = () => this.db.ref('Cours2');
 
+      DetailApprenant = uid => this.db.ref(`DetailApprenant/${uid}`);
+      DetailApprenants = () => this.db.ref('DetailApprenants');
+
 }
 
 

@@ -36,9 +36,9 @@ const App = () => {
             <div>
                 {/*<Navigation />
                 <Navigation2 />*/}
-                <Navigation3 />
+                {/* <Navigation3 /> */}
 
-                <hr/>
+                {/* <hr/> */}
                 <Route exact path={ROUTES.LANDING} component={LandingPage} />
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
                 <Route path={ROUTES.SIGN_IN} component={SignInPageApp} />
@@ -46,7 +46,7 @@ const App = () => {
                 <Route path={ROUTES.HOME} component={HomePageApp} />
                 <Route path={ROUTES.HOME_ADM} component={HomePageAdmin} />
                 <Route path={ROUTES.COURS_ADM} component={ListeCoursAdmin} />
-                {/*<Route path={ROUTES.COURS_APP} component={ListeCours} />*/}
+                <Route path={ROUTES.COURS_APP} component={ListeCours} />
                 <Route path={ROUTES.ADD_COURSE} component={AddCourse} />
                 <Route path={ROUTES.ARCHI_COURSE} component={Archive} />
                 <Route path={ROUTES.DETAIL_ARCHI_COURSE} component={DetailArchive} />

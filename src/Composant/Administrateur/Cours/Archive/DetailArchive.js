@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TutorialDataService from "../../../../services/tutorial.service";
+import TutorialDataServiceA from "../../../../services/tutorial2.service";
 
 export default class Archive extends Component {
   constructor(props) {
@@ -164,7 +165,7 @@ export default class Archive extends Component {
   }
 
   deleteTutorial() {
-    TutorialDataService.delete(this.state.currentTutorial.key)
+    TutorialDataServiceA.delete(this.state.currentTutorial.key)
       .then(() => {
         this.props.refreshList();
       })
@@ -179,7 +180,7 @@ export default class Archive extends Component {
     return (
       <div className="card">
         <div class="card-header bg-dark">
-        <h4>Tutoriel</h4>
+        <h4 class="text-light">Détails</h4>
         </div>
         {currentTutorial ? (
           <div>
@@ -251,8 +252,16 @@ export default class Archive extends Component {
                   onChange={this.onChangeDescription}
                 />
               </div>
+              <button
+              className="btn btn-sm btn-danger mr-2"
+              onClick={this.deleteTutorial}
+            >
+              Delete
+            </button>
               </div>
             </form>
+
+            
               
           </div>
         ) : (

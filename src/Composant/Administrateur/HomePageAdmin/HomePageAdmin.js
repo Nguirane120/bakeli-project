@@ -139,12 +139,14 @@
 import React from "react"
 import "./HomePageAdmin.css"
 import jQuery from 'jquery' 
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Link, Switch, BrowserRouter } from 'react-router-dom';
 import ListeCoursAdm from "../../Administrateur/Cours/ListeCoursAdmin/ListeCoursAdmin"
 import ListApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant"
 import ListeProfesseur from "../../Administrateur/Professeur/ListeProfesseur/ListeProfesseur"
 import * as ROUTES from '../../../Constant/routes';
 import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant";
+import AddCourse from "../Cours/AjoutCours/AddCourse";
 //import ListApprenant from "../Apprenant/ListApprenant"
 //import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
@@ -176,6 +178,8 @@ const HomePageAdmin = () => {
             {/*<ApprenantProvider>
             <ListApprenant/>
             </ApprenantProvider>*/}
+            <div className="row">
+                    <div className="col-lg-12">
             <div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar" class="active">
 				<h1><Link className="logo nav-link" to={ROUTES.HOME_ADM}>M.</Link></h1>
@@ -231,10 +235,7 @@ const HomePageAdmin = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link className="nav-link" to={ROUTES.COURS_ADM}>ListeCoursAdm</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to={ROUTES.COURS_APP}>ListeCoursApp</Link>
+                        <Link className="nav-link" to={ROUTES.COURS_ADM}>ListeCours</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to={ROUTES.LISTE_PROF}>ListeProf</Link>
@@ -248,17 +249,10 @@ const HomePageAdmin = () => {
             </nav>
 
                 <h2 class="mb-4">Dashboard administrateur</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                {/*<Router>
-                <Switch>
-                    <Route path="ROUTES.COURS_ADM" exact component={ListeCoursAdm} />
-                    <Route path="ROUTES.COURS_ADM/ROUTES.LISTE_APP" component={ListeApprenant} />
-                    <Route path="ROUTES.LISTE_PROF" component={ListeProfesseur} />
-                    <Route render={() => <h1>404: page not found</h1>} />
-                </Switch>
-                </Router>*/}
+                
+                
             </div>
+            </div></div>
 		</div>
             
         </div>

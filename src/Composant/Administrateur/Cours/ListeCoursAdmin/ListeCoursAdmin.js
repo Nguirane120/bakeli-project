@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TutorialDataService from "../../../../services/tutorial.service";
 
 import Tutorial from "../DetailCoursAdmin/DetailCoursAdmin";
+import "./ListeCoursAdmin.css"
 
 export default class ListeCoursAdmin extends Component {
   constructor(props) {
@@ -80,8 +81,10 @@ export default class ListeCoursAdmin extends Component {
       <div className="list row">
         <div className="col-md-6">
           
-          <h4>Tutoriels List</h4>
-
+          <div className="card-header bg-dark">
+          <h4 class="text-light">Liste des cours</h4>
+          </div>
+          
           <ul className="list-group">
             {tutorials &&
               tutorials.map((tutorial, index) => (
@@ -114,7 +117,7 @@ export default class ListeCoursAdmin extends Component {
           ) : (
             <div>
               <br />
-              <p>Click sur un Tutoriel...</p>
+              <p>Clickez sur un cours pour voir les détails</p>
             </div>
           )}
         </div>

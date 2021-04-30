@@ -222,7 +222,7 @@ const HomePageApp = () => {
                             </ul>
                             </div>
                         </div>
-                        </nav>
+                    </nav>
                             
                         <h2 class="mb-4">Dashboard apprenant</h2>
                         
