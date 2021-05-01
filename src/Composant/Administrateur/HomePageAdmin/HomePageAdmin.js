@@ -147,6 +147,7 @@ import ListeProfesseur from "../../Administrateur/Professeur/ListeProfesseur/Lis
 import * as ROUTES from '../../../Constant/routes';
 import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant";
 import AddCourse from "../Cours/AjoutCours/AddCourse";
+import Aside from "./Aside/Aside";
 //import ListApprenant from "../Apprenant/ListApprenant"
 //import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
@@ -179,7 +180,7 @@ const HomePageAdmin = () => {
             <ListApprenant/>
             </ApprenantProvider>*/}
             <div className="row">
-                    <div className="col-lg-12">
+            <div className="col-lg-9 main-page">
             <div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar" class="active">
 				<h1><Link className="logo nav-link" to={ROUTES.HOME_ADM}>M.</Link></h1>
@@ -252,7 +253,11 @@ const HomePageAdmin = () => {
                 
                 
             </div>
-            </div></div>
+            </div>
+            </div>
+            <div className="col-lg-3 pt-5 px-4 aside">
+                <Aside />
+            </div>
 		</div>
             
         </div>

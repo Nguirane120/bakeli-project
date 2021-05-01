@@ -138,7 +138,7 @@ import Aside from "./Aside/Aside"
 import './HomePageApp.css';
 import * as ROUTES from '../../../Constant/routes';
 import Calendars from "./Aside/Calendars";
-import ListeCours from "../Cours/ListeCours/ListeCours"
+import ListeCours from "../../Apprenant/Cours/ListeCours/ListeCours"
 //import ListeCours from '../Cours/ListeCours/ListeCours'
 
 
@@ -168,7 +168,7 @@ const HomePageApp = () => {
         <>
             {/*<div className="container-fluid">*/}
                 <div className="row">
-                    <div className="col-lg-9">
+                    <div className="col-lg-9 main-page">
                     <div class="wrapper d-flex align-items-stretch">
                         
                     <nav id="sidebar" class="active">

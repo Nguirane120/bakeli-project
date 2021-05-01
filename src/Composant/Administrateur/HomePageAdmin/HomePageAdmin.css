@@ -8217,7 +8217,8 @@
   #sidebar {
     min-width: 270px;
     max-width: 270px;
-    background: #3e64ff;
+    /* background: #3e64ff; */
+    background-color: rgba(65, 105, 251, 0.6);
     color: #fff;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
