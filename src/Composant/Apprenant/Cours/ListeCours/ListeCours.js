@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import TutorialDataService from "../../../../services/tutorial2.service";
+import TutorialDataService from "../../../../services/tutorial.service";
 
 import Tutorial from "../DetailCours";
 
-export default class ListeCoursAdmin extends Component {
+export default class ListeCours extends Component {
   constructor(props) {
     super(props);
     this.refreshList = this.refreshList.bind(this);
@@ -81,7 +81,7 @@ export default class ListeCoursAdmin extends Component {
         <div className="col-md-6">
 
           <div className="card-header bg-dark">
-          <h4>Tutoriels List</h4>
+          <h4 class="text-light">Liste des cours</h4>
           </div>
 
           <ul className="list-group">
@@ -110,7 +110,7 @@ export default class ListeCoursAdmin extends Component {
           ) : (
             <div>
               <br />
-              <p>Click sur un Tutoriel...</p>
+              <p>Clickez sur un cours pour voir les détails</p>
             </div>
           )}
         </div>

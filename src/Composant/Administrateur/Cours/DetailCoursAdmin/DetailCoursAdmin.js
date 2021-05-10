@@ -142,6 +142,10 @@ export default class DetailCours extends Component {
         this.setState({
           submitted: true,
         });
+      TutorialDataService.delete(this.state.currentTutorial.key)
+        .then(() => {
+        this.props.refreshList();
+      })
       })
       .catch((e) => {
         console.log(e);
@@ -185,7 +189,7 @@ export default class DetailCours extends Component {
     return (
       <div className="card">
         <div class="card-header bg-dark">
-        <h4>Tutoriel</h4>
+        <h4 class="text-light">Détails</h4>
         </div>
         {currentTutorial ? (
           <div className="card-body bg-warning">

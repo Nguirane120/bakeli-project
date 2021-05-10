@@ -1,13 +1,14 @@
 import React from 'react';
 import calendrier from '../image/calendrier.jpeg'
+import "../Aside/CalendarCard.css"
 
 const CalendarCard = () => {
     return(
         <div>
 
                   
-            <h6>About teacher</h6>
-            <div className="card w-75 d-flex flex-row align-items-center card-teacher mb-1">
+            <h6>Calendar</h6>
+            <div className="card d-flex flex-row align-items-center card-teacher mb-3 mx-auto calendarCard">
                 <div className="col-4">
                     <img className="card-img-top" src={calendrier} alt="image calendrier" />
             </div>

@@ -4,8 +4,9 @@ import './statistique.css';
 const Statistique = () => {
     return(
         <div>
-            <div className="row mb-2">
-                <div className="col-6">
+            <h6>Statistiques</h6>
+            <div className="row mb-lg-2">
+                <div className="col-12 mb-2 col-md-6">
                     <div className="card card-stat">
                     <div className="card-body">
                         
@@ -14,7 +15,7 @@ const Statistique = () => {
                     </div>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-12 mb-2 col-md-6">
                     <div className="card card-stat">
                     <div className="card-body">
                     <p className="card-text">Webinaire en ligne</p>
@@ -23,8 +24,8 @@ const Statistique = () => {
                     </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-6">
+            <div className="row mb-lg-2">
+                <div className="col-12 mb-2 col-md-6">
                     <div className="card card-stat">
                     <div className="card-body">
                     <p className="card-text">En cours</p>
@@ -32,7 +33,7 @@ const Statistique = () => {
                     </div>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-12 mb-2 col-md-6">
                     <div className="card card-stat">
                     <div className="card-body">
                     <p className="card-text">Professeur</p>

@@ -81,7 +81,7 @@ export default class Archive extends Component {
         <div className="col-md-6">
 
           <div className="card-header bg-dark">
-          <h4>Archives</h4>
+          <h4 class="text-light">Cours archivés</h4>
           </div>
 
           <ul className="list-group">
@@ -116,7 +116,8 @@ export default class Archive extends Component {
           ) : (
             <div>
               <br />
-              <p>Click sur un Tutoriel...</p>
+              <p>Clickez pour voir les détails
+              </p>
             </div>
           )}
         </div>
