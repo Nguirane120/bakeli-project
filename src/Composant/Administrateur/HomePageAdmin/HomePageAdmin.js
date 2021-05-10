@@ -144,8 +144,12 @@ import { BrowserRouter as Router, Route, Link, Switch, BrowserRouter } from 'rea
 import ListeCoursAdm from "../../Administrateur/Cours/ListeCoursAdmin/ListeCoursAdmin"
 import ListApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant"
 import ListeProfesseur from "../../Administrateur/Professeur/ListeProfesseur/ListeProfesseur"
+import AjoutProfesseur from "../Professeur/AjoutProfesseur/AjoutProfesseur"
+import AjoutApprenant from "../Apprenant/AjoutApprenant/AjoutApprenant"
+import Archive from "../Cours/Archive/Archive"
+import DetailProfesseur from "../Professeur/DetailProfesseur/DetailProfesseur"
 import * as ROUTES from '../../../Constant/routes';
-import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant";
+//import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant";
 import AddCourse from "../Cours/AjoutCours/AddCourse";
 import Aside from "./Aside/Aside";
 //import ListApprenant from "../Apprenant/ListApprenant"
@@ -182,6 +186,7 @@ const HomePageAdmin = () => {
             <div className="row">
             <div className="col-lg-9 main-page">
             <div class="wrapper d-flex align-items-stretch">
+            <BrowserRouter> 
 			<nav id="sidebar" class="active">
 				<h1><Link className="logo nav-link" to={ROUTES.HOME_ADM}>M.</Link></h1>
                 <ul class="list-unstyled components mb-5">
@@ -191,7 +196,7 @@ const HomePageAdmin = () => {
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to={ROUTES.HOME_ADM} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><span class="fa fa-user-plus" aria-hidden="true"></span> Ajouter</Link>
                     <div className="dropdown-menu bg-primary">
-                        <Link className="dropdown-item px-4 py-2" to={ROUTES.SIGN_UP}>Ajouter apprenant</Link>
+                        <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_APP}>Ajouter apprenant</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_PROF}>Ajouter professeur</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_COURSE}>Ajouter cours</Link>
                     </div>
@@ -219,7 +224,8 @@ const HomePageAdmin = () => {
                 </div>
             </nav>
 
-            {/*------Page Content------*/}  
+            {/*------Page Content------*/} 
+            
             <div id="content" class="p-4 p-md-5">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -250,9 +256,24 @@ const HomePageAdmin = () => {
             </nav>
 
                 <h2 class="mb-4">Dashboard administrateur</h2>
+                <Switch>
+                    <Route path="/liste_cours_adm" component={ListeCoursAdm}/>
+                    <Route path="/liste_app" component={ListApprenant}/>
+                    <Route path="/liste_prof" component={ListeProfesseur}/>
+                    <Route path="/ajout_cours" component={AddCourse}/>
+                    <Route path="/archive" component={Archive}/>
+                    <Route path="/ajout_prof" component={AjoutProfesseur}/>
+                    <Route path="/edit/:id" component={DetailProfesseur}/>
+                    <Route path="/ajout_app" component={AjoutApprenant}/>
+                {/* <ListeCoursAdm />
+                <ListApprenant />
+                <ListeProfesseur />
+                <AddCourse /> */}
+                </Switch>
                 
                 
             </div>
+            </BrowserRouter>
             </div>
             </div>
             <div className="col-lg-3 pt-5 px-4 aside">

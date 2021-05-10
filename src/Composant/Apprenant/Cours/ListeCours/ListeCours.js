@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../../../../services/tutorial.service";
 
-import Tutorial from "../DetailCours";
+import Tutorial from "../DetailCours/DetailCours";
 
 export default class ListeCours extends Component {
   constructor(props) {

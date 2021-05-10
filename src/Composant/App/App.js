@@ -30,6 +30,7 @@ import * as ROUTES from '../../Constant/routes';
 import './App.css';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
+
 const App = () => {
   return (
     <Router>
@@ -56,8 +57,10 @@ const App = () => {
                 <Route path={ROUTES.ADD_APP} component={AjoutApprenant} />
                 <Route path={ROUTES.LISTE_APP} component={ListeApprenant} />
                 <Route path={ROUTES.DETAIL_APP} component={DetailApprenant} />
-                {/*<Route path={ROUTES.CALENDAR} component={Calendars} />*/}
+                <Route path={ROUTES.CALENDAR} component={Calendars} />
             </div>
+          
+
         </Router>
   );
 }
