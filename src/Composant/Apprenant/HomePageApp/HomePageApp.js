@@ -172,7 +172,7 @@ const HomePageApp = () => {
                     <div class="wrapper d-flex align-items-stretch">
                     <BrowserRouter>
                         
-                    <nav id="sidebar" class="active">
+                    <nav id="sidebar" class="active bg-info">
                     
                             <h1><Link className="logo nav-link" to={ROUTES.HOME}>M.</Link></h1>
                             <ul class="list-unstyled components mb-5">

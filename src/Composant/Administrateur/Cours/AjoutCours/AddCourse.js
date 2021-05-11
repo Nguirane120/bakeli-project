@@ -114,10 +114,10 @@ export default class AddCourse extends Component {
             <div className="card">
 
               <div className="card-header bg-dark">
-              <h4 class="text-light">Ajouter</h4>
+              <h4 class="text-light">Ajouter un cour</h4>
               </div>
 
-              <div className="card-body bg-danger">
+              <div className="card-body">
             <div className="form-group">
               <label htmlFor="title">Titre</label>
               <input
@@ -144,7 +144,7 @@ export default class AddCourse extends Component {
               />
             </div> */}
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="time">Temps</label>
               <input
                 type="text"
@@ -155,7 +155,7 @@ export default class AddCourse extends Component {
                 onChange={this.onChangeTime}
                 name="time"
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="teacher">Professeur</label>
@@ -170,7 +170,7 @@ export default class AddCourse extends Component {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="lesson">Leçon</label>
               <input
                 type="text"
@@ -181,7 +181,7 @@ export default class AddCourse extends Component {
                 onChange={this.onChangeLesson}
                 name="lesson"
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="description">Description</label>

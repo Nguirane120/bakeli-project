@@ -192,7 +192,7 @@ export default class DetailCours extends Component {
         <h4 class="text-light">Détails</h4>
         </div>
         {currentTutorial ? (
-          <div className="card-body bg-warning">
+          <div className="card-body">
           <div>
             
             <form>
@@ -209,7 +209,7 @@ export default class DetailCours extends Component {
                 />
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="date">Date</label>
                 <input
                   type="text"
@@ -218,9 +218,9 @@ export default class DetailCours extends Component {
                   value={currentTutorial.date}
                   onChange={this.onChangeDate}
                 />
-              </div>
+              </div> */}
 
-              <div className="form-group">
+              {/* <div className="form-group">
               <label htmlFor="time">Temps</label>
               <input
                 type="text"
@@ -229,7 +229,7 @@ export default class DetailCours extends Component {
                 value={currentTutorial.time}
                 onChange={this.onChangeTime}
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="teacher">Professeur</label>
@@ -242,7 +242,7 @@ export default class DetailCours extends Component {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="lesson">Leçon</label>
               <input
                 type="text"
@@ -251,7 +251,7 @@ export default class DetailCours extends Component {
                 value={currentTutorial.lesson}
                 onChange={this.onChangeLesson}
               />
-            </div>
+            </div> */}
 
               <div className="form-group">
                 <label htmlFor="description">Description</label>

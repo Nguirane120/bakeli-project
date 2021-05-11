@@ -19,6 +19,7 @@ import DetailProfesseur from '../Administrateur/Professeur/DetailProfesseur/Deta
 import AjoutApprenant from '../Administrateur/Apprenant/AjoutApprenant/AjoutApprenant';
 import ListeApprenant from '../Administrateur/Apprenant/ListeApprenant/ListeApprenant';
 import DetailApprenant from '../Administrateur/Apprenant/DetailApprenant/DetailApprenant';
+// import ArchiveApp from "../Administrateur/Apprenant/Archive/Archive"
 import Calendars from '../Apprenant/HomePageApp/Aside/Calendars';
 //import PasswordForgetPage from '../PasswordForget';
 import HomePageAdmin from '../Administrateur/HomePageAdmin/HomePageAdmin';
@@ -57,6 +58,7 @@ const App = () => {
                 <Route path={ROUTES.ADD_APP} component={AjoutApprenant} />
                 <Route path={ROUTES.LISTE_APP} component={ListeApprenant} />
                 <Route path={ROUTES.DETAIL_APP} component={DetailApprenant} />
+                {/* <Route path={ROUTES.ARCHI_APP} component={ArchiveApp} /> */}
                 <Route path={ROUTES.CALENDAR} component={Calendars} />
             </div>
           

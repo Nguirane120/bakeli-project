@@ -141,6 +141,7 @@ import "./HomePageAdmin.css"
 import jQuery from 'jquery' 
 
 import { BrowserRouter as Router, Route, Link, Switch, BrowserRouter } from 'react-router-dom';
+import LandingAdm from "./Landing/LangingAdm"
 import ListeCoursAdm from "../../Administrateur/Cours/ListeCoursAdmin/ListeCoursAdmin"
 import ListApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant"
 import ListeProfesseur from "../../Administrateur/Professeur/ListeProfesseur/ListeProfesseur"
@@ -152,6 +153,7 @@ import * as ROUTES from '../../../Constant/routes';
 //import ListeApprenant from "../../Administrateur/Apprenant/ListeApprenant/ListeApprenant";
 import AddCourse from "../Cours/AjoutCours/AddCourse";
 import Aside from "./Aside/Aside";
+import Badge from 'react-bootstrap/Badge'
 //import ListApprenant from "../Apprenant/ListApprenant"
 //import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
@@ -187,7 +189,7 @@ const HomePageAdmin = () => {
             <div className="col-lg-9 main-page">
             <div class="wrapper d-flex align-items-stretch">
             <BrowserRouter> 
-			<nav id="sidebar" class="active">
+			<nav id="sidebar" class="active bg-info">
 				<h1><Link className="logo nav-link" to={ROUTES.HOME_ADM}>M.</Link></h1>
                 <ul class="list-unstyled components mb-5">
                 <li className="nav-item active">
@@ -195,7 +197,7 @@ const HomePageAdmin = () => {
                 </li>
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to={ROUTES.HOME_ADM} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><span class="fa fa-user-plus" aria-hidden="true"></span> Ajouter</Link>
-                    <div className="dropdown-menu bg-primary">
+                    <div className="dropdown-menu bg-info">
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_APP}>Ajouter apprenant</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_PROF}>Ajouter professeur</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_COURSE}>Ajouter cours</Link>
@@ -203,7 +205,7 @@ const HomePageAdmin = () => {
                 </li>
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to={ROUTES.HOME_ADM} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><span class="fa fa-file-archive" aria-hidden="true"></span> Archives</Link>
-                    <div className="dropdown-menu bg-primary">
+                    <div className="dropdown-menu bg-info">
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_COURSE}>Archive des apprenant</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_PROF}>Archive des professeur</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ARCHI_COURSE}>Archive des cours</Link>
@@ -254,9 +256,15 @@ const HomePageAdmin = () => {
                 </div>
             </div>
             </nav>
-
-                <h2 class="mb-4">Dashboard administrateur</h2>
+                <div className="d-flex justify-content-between">
+                    <h6 class="mb-4">Dashboard administrateur</h6>
+                    <h6>
+                        Notification <Badge variant="info">13</Badge>
+                    </h6>
+                </div>
+                
                 <Switch>
+                    <Route path="/home_adm" component={LandingAdm}/>
                     <Route path="/liste_cours_adm" component={ListeCoursAdm}/>
                     <Route path="/liste_app" component={ListApprenant}/>
                     <Route path="/liste_prof" component={ListeProfesseur}/>

@@ -186,7 +186,7 @@ export default class Archive extends Component {
           <div>
             
             <form>
-            <div className="card-body bg-success">
+            <div className="card-body">
               <div className="form-group">
                 <label htmlFor="title">Titre</label>
                 <input
@@ -198,7 +198,7 @@ export default class Archive extends Component {
                 />
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="date">Date</label>
                 <input
                   type="text"
@@ -218,7 +218,7 @@ export default class Archive extends Component {
                 value={currentTutorial.time}
                 onChange={this.onChangeTime}
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="teacher">Professeur</label>
@@ -231,7 +231,7 @@ export default class Archive extends Component {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="lesson">Leçon</label>
               <input
                 type="text"
@@ -240,7 +240,7 @@ export default class Archive extends Component {
                 value={currentTutorial.lesson}
                 onChange={this.onChangeLesson}
               />
-            </div>
+            </div> */}
 
               <div className="form-group">
                 <label htmlFor="description">Description</label>
