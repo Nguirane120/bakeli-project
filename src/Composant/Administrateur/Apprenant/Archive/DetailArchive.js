@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/service";
+import TutorialDataService from "../../../../services/service";
 import TutorialDataServiceB from "../services/service1";
 
 export default class DetailArchive extends Component {
