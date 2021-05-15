@@ -7,7 +7,7 @@ const Calendars = () => {
     return(
         <div>
             <h6>Timetable</h6>
-            <div>
+            <div className="d-flex justify-content-center">
             <Calendar
                 onChange={onChange}
                 value={value}

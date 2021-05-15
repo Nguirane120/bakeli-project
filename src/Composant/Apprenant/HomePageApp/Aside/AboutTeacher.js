@@ -5,7 +5,7 @@ const AboutTeacher = () => {
     return(
         <div>
             <h6>About teacher</h6>
-            <div className="card d-flex flex-row align-items-center card-teacher mb-1 mx-auto calendarCard">
+            <div className="card d-flex flex-row align-items-center card-teacher mb-1 mx-auto">
                             <div className="col-4">
                                 <img className="card-img-top img-card-teacher rounded-circle" src={sambou} alt="Card image cap" />
                             </div>

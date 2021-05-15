@@ -154,6 +154,8 @@ import * as ROUTES from '../../../Constant/routes';
 import AddCourse from "../Cours/AjoutCours/AddCourse";
 import Aside from "./Aside/Aside";
 import Badge from 'react-bootstrap/Badge'
+import Button from 'react-bootstrap/Button'
+import ArchiveApp from "../Apprenant/Archive/Archives";
 //import ListApprenant from "../Apprenant/ListApprenant"
 //import ApprenantProvider from "../Apprenant/context/AppreantContext";
 
@@ -186,7 +188,7 @@ const HomePageAdmin = () => {
             <ListApprenant/>
             </ApprenantProvider>*/}
             <div className="row">
-            <div className="col-lg-9 main-page">
+            <div className="col-lg-9 pr-1 main-page">
             <div class="wrapper d-flex align-items-stretch">
             <BrowserRouter> 
 			<nav id="sidebar" class="active bg-info">
@@ -206,7 +208,7 @@ const HomePageAdmin = () => {
                 <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" to={ROUTES.HOME_ADM} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><span class="fa fa-file-archive" aria-hidden="true"></span> Archives</Link>
                     <div className="dropdown-menu bg-info">
-                        <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_COURSE}>Archive des apprenant</Link>
+                        <Link className="dropdown-item px-4 py-2" to={ROUTES.ARCHI_APP}>Archive des apprenant</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ADD_PROF}>Archive des professeur</Link>
                         <Link className="dropdown-item px-4 py-2" to={ROUTES.ARCHI_COURSE}>Archive des cours</Link>
                     </div>
@@ -221,7 +223,7 @@ const HomePageAdmin = () => {
 
                 <div class="footer">
                     <p>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by crazy_coderz.
                     </p>
                 </div>
             </nav>
@@ -256,39 +258,57 @@ const HomePageAdmin = () => {
                 </div>
             </div>
             </nav>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex">
                     <h6 class="mb-4">Dashboard administrateur</h6>
-                    <h6>
-                        Notification <Badge variant="info">13</Badge>
-                    </h6>
+                    <div className="d-flex flex-row ml-auto pr-5">
+                        <p> 
+                            Messages <Badge pill variant="danger" className="mr-3">new</Badge>
+                        </p>
+                        <p>
+                            Notification <Badge pill variant="info">13</Badge>
+                        </p>
+                    </div>
+                    
                 </div>
                 
                 <Switch>
                     <Route path="/home_adm" component={LandingAdm}/>
                     <Route path="/liste_cours_adm" component={ListeCoursAdm}/>
                     <Route path="/liste_app" component={ListApprenant}/>
+                    <Route path="/archive_app" component={ArchiveApp}/>
                     <Route path="/liste_prof" component={ListeProfesseur}/>
                     <Route path="/ajout_cours" component={AddCourse}/>
                     <Route path="/archive" component={Archive}/>
                     <Route path="/ajout_prof" component={AjoutProfesseur}/>
                     <Route path="/edit/:id" component={DetailProfesseur}/>
                     <Route path="/ajout_app" component={AjoutApprenant}/>
-                {/* <ListeCoursAdm />
-                <ListApprenant />
-                <ListeProfesseur />
-                <AddCourse /> */}
                 </Switch>
                 
+                <footer style={{position: "fixed", bottom: "0px", left: "220px"}} class="footer my-2 py-3 bg-none text-center">
+                
+                <div class="container text-center">
+                    <span class="text-muted">Copyright &copy; All rights reserved | This template is made with ♡ by crazy_coderz.</span>
+                </div>
+            </footer>
+                
                 
             </div>
+            
+
             </BrowserRouter>
+            
+            
             </div>
+            
+            
             </div>
-            <div className="col-lg-3 pt-5 px-4 aside">
+            <div className="col-lg-3 pt-5 px-0 mx-0 aside">
                 <Aside />
             </div>
-		</div>
             
+            
+		</div>
+        
         </div>
     )
 }

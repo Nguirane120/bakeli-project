@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import TutorialDataService from "../../../services/service";
-import TutorialDataServiceA from "../../../services/service1";
+import TutorialDataService from "../../../../services/service";
+import TutorialDataServiceB from "../../../services/service1";
 
-export default class DetailApprenant extends Component {
+export default class DetailArchive extends Component {
   constructor(props) {
     super(props);
     this.onChangeNoms = this.onChangeNoms.bind(this);
@@ -126,7 +126,7 @@ export default class DetailApprenant extends Component {
       published: false
      };
 
-    TutorialDataServiceA.create(data)
+    TutorialDataServiceB.create(data)
       .then(() => {
         console.log("Created new item successfully!");
         this.setState({
@@ -164,7 +164,7 @@ export default class DetailApprenant extends Component {
   }
 
   deleteTutorial() {
-    TutorialDataService.delete(this.state.currentTutorial.key)
+    TutorialDataServiceB.delete(this.state.currentTutorial.key)
       .then(() => {
         this.props.refreshList();
       })
@@ -179,7 +179,7 @@ export default class DetailApprenant extends Component {
     return (
       <div className="card">
         <div class="card-header bg-dark">
-        <h4 class="text-light">Détail de l'apprenant</h4>
+        <h4 class="text-light">Apprenant</h4>
         </div>
         {currentTutorial ? (
           <div className="card-body">
@@ -241,12 +241,12 @@ export default class DetailApprenant extends Component {
               
             </form>
 
-              <button
+              {/* <button
                 className="btn btn-sm btn-primary mr-2"
                 onClick={() => this.updatePublished(true)}
               >
                 Archive
-              </button>
+              </button> */}
             
 
             <button
@@ -256,13 +256,13 @@ export default class DetailApprenant extends Component {
               Delete
             </button>
 
-            <button
+            {/* <button
               type="submit"
               className="btn btn-sm btn-success"
               onClick={this.updateTutorial}
             >
               Update
-            </button>
+            </button> */}
             <p>{this.state.message}</p>
           </div>
           </div>

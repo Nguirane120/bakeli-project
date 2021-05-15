@@ -139,6 +139,7 @@ import './HomePageApp.css';
 import * as ROUTES from '../../../Constant/routes';
 import Calendars from "./Aside/Calendars"
 import ListeCours from "../../Apprenant/Cours/ListeCours/ListeCours"
+import Badge from 'react-bootstrap/Badge'
 //import ListeCours from '../Cours/ListeCours/ListeCours'
 
 
@@ -193,7 +194,7 @@ const HomePageApp = () => {
 
                             <div class="footer">
                                 <p>
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by crazy_coderz.
                                 </p>
                             </div>
                         </nav>
@@ -225,18 +226,35 @@ const HomePageApp = () => {
                         </div>
                     </nav>
                             
-                        <h2 class="mb-4">Dashboard apprenant</h2>
+                    <div className="d-flex">
+                    <h6 class="mb-4">Dashboard apprenant</h6>
+                    <div className="d-flex flex-row ml-auto pr-5">
+                        <p> 
+                            Messages <Badge pill variant="danger" className="mr-3">new</Badge>
+                        </p>
+                        <p>
+                            Notification <Badge pill variant="info">13</Badge>
+                        </p>
+                    </div>
+                    
+                </div>
                         
                             <Switch>
                                 <Route path="/liste_cours_app" component={ListeCours}/>
                                 <Route exact path="/calendar" component={Calendars}/>
                             </Switch>
+
+                            <footer style={{position: "fixed", bottom: "0px", left: "220px"}} class="footer my-2 py-3 bg-none text-center">                
+                                <div class="container text-center">
+                                    <span class="text-muted">Copyright &copy; All rights reserved | This template is made with ♡ by crazy_coderz.</span>
+                                </div>
+                            </footer>
                         
                         </div>
                         </BrowserRouter>
                     </div>
                     </div>
-                    <div className="col-lg-3 pt-5 px-4 aside">
+                    <div className="col-lg-3 pt-5 px-0 mx-0 aside">
                         <Aside />
                     </div>
                 </div>

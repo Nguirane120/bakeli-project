@@ -105,6 +105,12 @@ export default class AjoutApprenant extends Component {
           </div>
         ) : (
           <div>
+            <div className="card">
+              <div className="card-header bg-dark">
+                <h4 class="text-light">Ajouter un apprenant</h4>
+              </div>
+              <div className="card-body">
+            
             <div className="form-group">
               <label htmlFor="noms">Noms</label>
               <input
@@ -131,7 +137,7 @@ export default class AjoutApprenant extends Component {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="telephone">Telephone</label>
               <input
                 type="text"
@@ -142,7 +148,7 @@ export default class AjoutApprenant extends Component {
                 onChange={this.onChangeTelephone}
                 name="telephone"
               />
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="gmail">Gmail</label>
@@ -158,7 +164,7 @@ export default class AjoutApprenant extends Component {
             </div>
 
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="passe">Passe</label>
               <input
                 type="text"
@@ -169,11 +175,13 @@ export default class AjoutApprenant extends Component {
                 onChange={this.onChangePasse}
                 name="passe"
               />
-            </div>
+            </div> */}
 
             <button onClick={this.saveTutorial} className="btn btn-success">
               Submit
             </button>
+            </div>
+            </div>
           </div>
         )}
       </div>

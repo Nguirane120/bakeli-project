@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import TutorialDataService from "../../../../services/service";
+import TutorialDataServiceB from "../../../services/service1";
 
-import Tutorial from "../DetailApprenant/DetailApprenant";
+import Tutorial from "./DetailArchive";
 
-export default class ListeApprenant extends Component {
+export default class ArchiveApp extends Component {
   constructor(props) {
     super(props);
     this.refreshList = this.refreshList.bind(this);
@@ -19,11 +19,11 @@ export default class ListeApprenant extends Component {
   }
 
   componentDidMount() {
-    TutorialDataService.getAll().on("value", this.onDataChange);
+    TutorialDataServiceB.getAll().on("value", this.onDataChange);
   }
 
   componentWillUnmount() {
-    TutorialDataService.getAll().off("value", this.onDataChange);
+    TutorialDataServiceB.getAll().off("value", this.onDataChange);
   }
 
   onDataChange(items) {
@@ -63,7 +63,7 @@ export default class ListeApprenant extends Component {
   }
 
   removeAllTutorials() {
-    TutorialDataService.deleteAll()
+    TutorialDataServiceB.deleteAll()
       .then(() => {
         this.refreshList();
       })
@@ -78,7 +78,7 @@ export default class ListeApprenant extends Component {
     return (
       <div className="list row">
         <div className="col-md-6">
-          <h4>Liste des Apprenants</h4>
+          <h4>Apprenants archivés</h4>
 
           <ul className="list-group">
             {tutorials &&
