@@ -1,6 +1,9 @@
 import React from "react"
 
 const LandingAdm = () => {
+
+
+
     return(
         <div class="grey-bg container-fluid">
             <section id="minimal-statistics">

@@ -96,7 +96,7 @@ const SignUpPage = (props) => {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Already have an account? <Link to="/login">login</Link>
+        Already have an account? <Link to="/signin_adm">login</Link>
       </div>
       </div>
       </Container>
